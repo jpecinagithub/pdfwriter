@@ -86,6 +86,7 @@ export default function App(): React.ReactElement {
         else if (s.appendDialogOpen) s.setAppendDialogOpen(false);
         else if (s.storageDialogOpen) s.setStorageDialogOpen(false);
         else if (s.privacyOpen) s.setPrivacyOpen(false);
+        else if (s.aboutOpen) s.setAboutOpen(false);
         else if (s.historyOpen) s.setHistoryOpen(false);
         else if (s.selectedIds.length > 0) s.clearSelection();
         else if (s.activeTool !== "select") s.setActiveTool("select");

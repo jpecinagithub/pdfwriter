@@ -240,7 +240,7 @@ export default function UploadScreen({ restoring }: { restoring?: boolean }): Re
       </main>
 
       <footer className="border-t border-zinc-200 bg-white">
-        <ul className="max-w-3xl mx-auto px-6 py-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-zinc-500">
+        <ul className="max-w-3xl mx-auto px-6 pt-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-zinc-500">
           {["Local processing", "No document upload", "No account required", "Local editing history"].map((item) => (
             <li key={item} className="flex items-center gap-1.5">
               <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500" aria-hidden="true" />
@@ -248,6 +248,16 @@ export default function UploadScreen({ restoring }: { restoring?: boolean }): Re
             </li>
           ))}
         </ul>
+        <p className="max-w-3xl mx-auto px-6 pb-4 pt-2 text-center text-xs text-zinc-500">
+          Built by <span className="font-medium text-zinc-700">Jon Peciña</span>
+          {" · "}
+          <a
+            href="mailto:jpecina@gmail.com"
+            className="font-medium text-blue-600 hover:text-blue-700 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded"
+          >
+            Contact
+          </a>
+        </p>
       </footer>
     </div>
   );

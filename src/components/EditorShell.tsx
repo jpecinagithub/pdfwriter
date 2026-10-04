@@ -15,6 +15,7 @@ import HistoryPanel from "./HistoryPanel";
 import ExportDialog from "./dialogs/ExportDialog";
 import StorageDialog from "./dialogs/StorageDialog";
 import PrivacyDialog from "./dialogs/PrivacyDialog";
+import AboutDialog from "./dialogs/AboutDialog";
 import SignatureDialog from "./dialogs/SignatureDialog";
 import AppendPdfDialog from "./dialogs/AppendPdfDialog";
 
@@ -92,6 +93,7 @@ export const EditorShell = memo(function EditorShell(): React.ReactElement {
       <ExportDialog />
       <StorageDialog />
       <PrivacyDialog />
+      <AboutDialog />
       <SignatureDialog />
       <AppendPdfDialog />
       {historyOpen && <HistoryPanel />}

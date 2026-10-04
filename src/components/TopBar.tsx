@@ -12,6 +12,7 @@ import {
   Database,
   Download,
   FileText,
+  Info,
   LoaderCircle,
   Redo2,
   Search,
@@ -106,6 +107,7 @@ export default function TopBar(): React.ReactElement {
   const setHistoryOpen = useEditor((s) => s.setHistoryOpen);
   const setStorageDialogOpen = useEditor((s) => s.setStorageDialogOpen);
   const setPrivacyOpen = useEditor((s) => s.setPrivacyOpen);
+  const setAboutOpen = useEditor((s) => s.setAboutOpen);
   const setExportDialogOpen = useEditor((s) => s.setExportDialogOpen);
 
   const currentScale = zoom.mode === "scale" ? zoom.scale : 1;
@@ -216,6 +218,9 @@ export default function TopBar(): React.ReactElement {
         </IconButton>
         <IconButton label="Privacy" onClick={() => setPrivacyOpen(true)}>
           <ShieldCheck className="w-4 h-4" aria-hidden="true" />
+        </IconButton>
+        <IconButton label="About PDFWriter" onClick={() => setAboutOpen(true)}>
+          <Info className="w-4 h-4" aria-hidden="true" />
         </IconButton>
         <button
           type="button"

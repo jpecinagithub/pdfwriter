@@ -74,6 +74,7 @@ interface EditorState {
   historyOpen: boolean;
   storageDialogOpen: boolean;
   privacyOpen: boolean;
+  aboutOpen: boolean;
   signatureDialogOpen: boolean;
   appendDialogOpen: boolean;
 
@@ -135,6 +136,7 @@ interface EditorState {
   setHistoryOpen: (v: boolean) => void;
   setStorageDialogOpen: (v: boolean) => void;
   setPrivacyOpen: (v: boolean) => void;
+  setAboutOpen: (v: boolean) => void;
   setSignatureDialogOpen: (v: boolean) => void;
   setAppendDialogOpen: (v: boolean) => void;
 
@@ -167,6 +169,7 @@ export const useEditor = create<EditorState>()(
   historyOpen: false,
   storageDialogOpen: false,
   privacyOpen: false,
+  aboutOpen: false,
   signatureDialogOpen: false,
   appendDialogOpen: false,
   undoStack: [],
@@ -459,6 +462,7 @@ export const useEditor = create<EditorState>()(
   setHistoryOpen: (v) => set({ historyOpen: v }),
   setStorageDialogOpen: (v) => set({ storageDialogOpen: v }),
   setPrivacyOpen: (v) => set({ privacyOpen: v }),
+  setAboutOpen: (v) => set({ aboutOpen: v }),
   setSignatureDialogOpen: (v) => set({ signatureDialogOpen: v }),
   setAppendDialogOpen: (v) => set({ appendDialogOpen: v }),
 
