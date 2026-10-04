@@ -148,15 +148,15 @@ export default function UploadScreen({ restoring }: { restoring?: boolean }): Re
           }}
           className={`mt-4 rounded-2xl border-2 border-dashed p-6 sm:p-12 text-center cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 ${
             dragging
-              ? "border-blue-500 bg-blue-100"
-              : "border-blue-200 bg-blue-50/60 hover:border-blue-400 hover:bg-blue-50"
+              ? "border-blue-600 bg-blue-200"
+              : "border-blue-400 bg-blue-100 hover:border-blue-500 hover:bg-blue-200/60"
           }`}
         >
           <Upload
-            className={`w-10 h-10 mx-auto ${dragging ? "text-blue-600" : "text-blue-400"}`}
+            className={`w-10 h-10 mx-auto ${dragging ? "text-blue-700" : "text-blue-500"}`}
             aria-hidden="true"
           />
-          <p className="mt-4 text-xl font-semibold">Drop your PDF here</p>
+          <p className="mt-4 text-xl font-semibold text-blue-950">Drop your PDF here</p>
           <p className="mt-1 text-sm text-zinc-500">or</p>
           <span className="mt-3 inline-flex items-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium text-white shadow-sm">
             Select PDF
