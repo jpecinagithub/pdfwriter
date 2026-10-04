@@ -251,12 +251,7 @@ export default function UploadScreen({ restoring }: { restoring?: boolean }): Re
         <p className="max-w-3xl mx-auto px-6 pb-4 pt-2 text-center text-xs text-zinc-500">
           Built by <span className="font-medium text-zinc-700">Jon Peciña</span>
           {" · "}
-          <a
-            href="mailto:jpecina@gmail.com"
-            className="font-medium text-blue-600 hover:text-blue-700 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded"
-          >
-            Contact
-          </a>
+          <span className="font-medium text-zinc-700">jpecina@gmail.com</span>
         </p>
       </footer>
     </div>
