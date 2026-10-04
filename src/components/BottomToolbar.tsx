@@ -154,7 +154,7 @@ export default function BottomToolbar(): React.ReactElement {
 
   return (
     <div className="shrink-0 border-t border-zinc-200 bg-white shadow-[0_-2px_12px_rgba(0,0,0,0.04)] z-30">
-      <div className="flex items-stretch justify-center gap-0.5 px-2 py-2 overflow-x-auto">
+      <div className="flex items-stretch justify-start md:justify-center gap-0.5 px-2 py-2 overflow-x-auto">
         {TOOLS.map((tool) => {
           const isShape = tool.id === "shape";
           const active = activeTool === tool.id;
@@ -205,7 +205,7 @@ export default function BottomToolbar(): React.ReactElement {
           e.target.value = "";
         }}
       />
-      <div className="flex items-center justify-center gap-3 border-t border-zinc-100 px-4 py-1">
+      <div className="hidden sm:flex items-center justify-center gap-3 border-t border-zinc-100 px-4 py-1">
         <p className="text-[11px] text-zinc-500" aria-live="polite">
           {activeDef ? activeDef.hint : ""}
         </p>

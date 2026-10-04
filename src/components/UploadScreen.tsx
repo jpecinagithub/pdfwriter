@@ -116,15 +116,15 @@ export default function UploadScreen({ restoring }: { restoring?: boolean }): Re
   // ---- main landing -------------------------------------------------------
   return (
     <div className="min-h-screen flex flex-col bg-zinc-50 text-zinc-900">
-      <header className="pt-12 pb-6 text-center px-6">
-        <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-blue-600 shadow-md mb-5">
-          <FileText className="w-7 h-7 text-white" aria-hidden="true" />
+      <header className="pt-8 sm:pt-12 pb-6 text-center px-4 sm:px-6">
+        <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-blue-600 shadow-md mb-5">
+          <FileText className="w-6 h-6 sm:w-7 sm:h-7 text-white" aria-hidden="true" />
         </div>
-        <h1 className="text-4xl font-bold tracking-tight">PDFWriter</h1>
-        <p className="mt-2 text-lg text-zinc-600">Edit PDFs privately. Right in your browser.</p>
+        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">PDFWriter</h1>
+        <p className="mt-2 text-base sm:text-lg text-zinc-600">Edit PDFs privately. Right in your browser.</p>
       </header>
 
-      <main className="flex-1 w-full max-w-3xl mx-auto px-6 pb-10">
+      <main className="flex-1 w-full max-w-3xl mx-auto px-4 sm:px-6 pb-10">
         <div
           role="button"
           tabIndex={0}
@@ -146,12 +146,14 @@ export default function UploadScreen({ restoring }: { restoring?: boolean }): Re
             setDragging(false);
             openFile(e.dataTransfer.files?.[0]);
           }}
-          className={`mt-4 rounded-2xl border-2 border-dashed p-12 text-center cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 ${
-            dragging ? "border-blue-500 bg-blue-50" : "border-zinc-300 bg-white hover:border-blue-400 hover:bg-blue-50/50"
+          className={`mt-4 rounded-2xl border-2 border-dashed p-6 sm:p-12 text-center cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 ${
+            dragging
+              ? "border-blue-500 bg-blue-100"
+              : "border-blue-200 bg-blue-50/60 hover:border-blue-400 hover:bg-blue-50"
           }`}
         >
           <Upload
-            className={`w-10 h-10 mx-auto ${dragging ? "text-blue-600" : "text-zinc-400"}`}
+            className={`w-10 h-10 mx-auto ${dragging ? "text-blue-600" : "text-blue-400"}`}
             aria-hidden="true"
           />
           <p className="mt-4 text-xl font-semibold">Drop your PDF here</p>
@@ -240,7 +242,7 @@ export default function UploadScreen({ restoring }: { restoring?: boolean }): Re
       </main>
 
       <footer className="border-t border-zinc-200 bg-white">
-        <ul className="max-w-3xl mx-auto px-6 pt-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-zinc-500">
+        <ul className="max-w-3xl mx-auto px-4 sm:px-6 pt-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-zinc-500">
           {["Local processing", "No document upload", "No account required", "Local editing history"].map((item) => (
             <li key={item} className="flex items-center gap-1.5">
               <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500" aria-hidden="true" />
@@ -248,7 +250,7 @@ export default function UploadScreen({ restoring }: { restoring?: boolean }): Re
             </li>
           ))}
         </ul>
-        <p className="max-w-3xl mx-auto px-6 pb-4 pt-2 text-center text-xs text-zinc-500">
+        <p className="max-w-3xl mx-auto px-4 sm:px-6 pb-4 pt-2 text-center text-xs text-zinc-500">
           Built by <span className="font-medium text-zinc-700">Jon Peciña</span>
           {" · "}
           <span className="font-medium text-zinc-700">jpecina@gmail.com</span>

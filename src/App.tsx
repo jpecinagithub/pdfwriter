@@ -7,6 +7,7 @@
  * - Switches between the upload screen and the editor.
  */
 import { useCallback, useEffect, useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import { ErrorBoundary } from "./components/ErrorBoundary";
 import UploadScreen from "./components/UploadScreen";
 import { EditorShell } from "./components/EditorShell";
@@ -175,6 +176,7 @@ export default function App(): React.ReactElement {
             {toast}
           </div>
         )}
+        <Analytics />
       </div>
     </ErrorBoundary>
   );
